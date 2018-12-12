@@ -1,0 +1,32 @@
+{
+  "name": "todo-functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json 'src/**/*.ts'",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "es6": "0.0.7",
+    "express": "^4.16.4",
+    "firebase": "5.5.5",
+    "firebase-admin": "^6.3.0",
+    "firebase-functions": "^2.1.0",
+    "firebase-functions-helper": "^0.6.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.11.0",
+    "typescript": "^2.5.3"
+  },
+  "private": true
+}
